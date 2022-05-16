@@ -1,5 +1,6 @@
 import math
-import numpy as np
+import numpy as np1
+
 
 class Parabola_asse_x():
     def __init__(self):
@@ -17,7 +18,7 @@ class Parabola_asse_x():
         x = 0
         if b== 0 and c == 0:
             vertice = "l'origine degli assi"
-            delta = float((pow(b, 2)-(4*a*c)))
+            delta = float((pow(b, 2)-(4*a)))
             inty1 = float(((-1*b)- math.sqrt(delta))/(2*a))
             inty2 = float((b- math.sqrt(delta))/(2*a))
             inty = f"le interezioni conl'asse delle y sono (0,{inty1}) e (0,{inty2} e l' intersezione con l'asse delle x è (0,0) )"
@@ -44,7 +45,7 @@ class Parabola_asse_x():
             inty = f"le interezioni conl'asse delle y sono (0,{inty1}) e (0,{inty2})"
             return f'Il vertice ha coordinate ({x_vertice}, {y_vertice}), {intx} e {inty}'
 
-    def notevoli():
+    def notevoli(self):
         print("x = ay**2 +by +c")
         a = float(input("a = "))
         b = float(input("b = "))
@@ -100,7 +101,7 @@ class Parabola_asse_y():
             inty = f"le interezioni conl'asse delle y sono (0,{intx1}) e (0,{intx2})"
             return f'Il vertice ha coordinate ({x_vertice}, {y_vertice}), {intx} e {inty}'
 
-    def notevoli():
+    def notevoli(self):
         print("y = ax**2 +bx +c")
         a = float(input("a = "))
         b = float(input("b = "))
@@ -120,16 +121,34 @@ class Parabola_asse_y():
 #Fuoco
 #X vertice 
 # ASSe
-#Stesse cose per asse x
-
-            
-
+#Stesse cose per asse xs       
+    
+print("Ciao benvenuto nel risolutore di paarbole ricorda che la PARABOLA è il luogo geometrico dei punti equidistanti da un punto fisso detto fucoe da una retta detta direttrice")         
+tipo = int(input("Per risolvere la parabola con asse // all'asse delle y inserisci 1 sennò inserisci 0 per risolvere la parabola con asse // all'asse delle x "))
+if tipo == 1:
+        y = Parabola_asse_y()
+        cosa = int(input("Se vuoi disegnare la parabola inserisci 1 se invece vuoi conoscere il fuoco, l'asse e la direttrice inserisci 0 "))
+        if cosa == 1:
+            print(y.Disegno())
+        elif cosa == 0:
+            print(y.notevoli())
+        else: 
+            print("VALORE ERRATO")
+elif tipo == 0:
+        x = Parabola_asse_x()
+        cosa = int(input("Se vuoi disegnare la parabola inserisci 1 se invece vuoi conoscere il fuoco, l'asse e la direttrice inserisci 0 )"))
+        if cosa == 1:
+            print(x.Disegno())
+        elif cosa == 0:
+            print(x.notevoli())
+        else: 
+            print("VALORE ERRATO")
 
         
 
-         
-pa = Parabola_asse_x()  
-print(pa.Disegno())
+
+
+        
 
 
         
