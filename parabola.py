@@ -33,7 +33,7 @@ class Parabola_asse_x():
             inty2 = float((1*b)- math.sqrt(delta))/(2*a)
             inty = f"le interezioni conl'asse delle y sono (0,{inty1}) e (0,{inty2})"
             return f'Il vertice ha coordinate ({x_vertice}, {y_vertice}), {intx} e {inty}'
-        elif a == 0 and b == 0 and c == 0:
+        elif a == 0:
             return f"L'equazione è inesistente prova a inserire dei numeri corretti"
         else:
             delta = float(pow(b, 2)-(4*a*c))
@@ -89,7 +89,7 @@ class Parabola_asse_y():
             intx2 = float((1*b)- math.sqrt(delta))/(2*a)
             intx = f"le interezioni conl'asse delle y sono (0,{intx1}) e (0,{intx2})"
             return f'Il vertice ha coordinate ({x_vertice}, {y_vertice}), {intx} e {inty}'
-        elif a == 0 and b == 0 and c == 0:
+        elif a == 0:
             return f"L'equazione è inesistente prova a inserire dei numeri corretti"
         else:
             delta = float(pow(b, 2)-(4*a*c))
